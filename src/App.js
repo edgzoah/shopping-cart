@@ -11,16 +11,17 @@ const App = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [alert, setAlert] = useState(false);
+  const [copy, setCopy] = useState(false);
+
   useEffect(() => {
     const getData = async () => {
       const response = await fetch('products.json');
       const data = await response.json();
       setProducts(data.products);
+      setCopy(data.products);
     }
     getData();
   }, []);
-
-  const productsCopy = [...products];
 
   const addToCart = (product) => {
     const cartItems = cart.slice();
@@ -56,11 +57,11 @@ const App = () => {
   
   const filter = (event) => {
     const category = event.target.value;
-    const copy = productsCopy.slice();
-    if (category === '') {
+    if (category === 'ALL') {
       setProducts(copy);
     } else {
-      setProducts(copy.filter((product) => product.category === category));
+      const filtered = copy.filter((product) => product.category === category);
+      setProducts(filtered);
     }
   };
 
