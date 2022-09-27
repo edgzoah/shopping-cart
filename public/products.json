@@ -1,0 +1,103 @@
+{
+    "products":[
+       {
+          "id":1,
+          "name":"Iphone 14 Pro Max",
+          "size":"1TB",
+          "price":10000,
+          "quantity":999,
+          "description":"Iphone 14 Pro Max 1TB",
+          "available":true,
+          "category":"PHONE",
+          "image": "https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/41/4117934/Smartfon-APPLE-14-Pro-Max-Zloty-1.jpg"
+       },
+       {
+          "id":2,
+          "name":"Samsung Galaxy S21 Ultra",
+          "size":"512GB",
+          "price":8000,
+          "quantity":999,
+          "description":"Samsung Galaxy S21 Ultra 1TB",
+          "available":true,
+          "category":"PHONE",
+         "image": "https://images.samsung.com/is/image/samsung/p6pim/pl/galaxy-s21/gallery/pl-galaxy-s21-5g-g991-sm-g991bzideue-361105325"
+       },
+       {
+          "id":3,
+          "name":"Oppo Find X3 Pro",
+          "size":"256GB",
+          "price":6000,
+          "quantity":999,
+          "description":"Oppo Find X3 Pro 1TB",
+          "available":true,
+          "category":"PHONE",
+          "image": "https://cdn-files.kimovil.com/default/0005/82/thumb_481243_default_big.jpeg"
+       },
+       {
+          "id":4,
+          "name":"Poco F3",
+          "size":"128GB",
+          "price":4000,
+          "quantity":999,
+          "description":"Poco F3 1TB",
+          "available":true,
+          "category":"PHONE",
+         "image": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2021/4/pr_2021_4_9_10_31_40_708_00.jpg"
+       },
+       {
+          "id":5,
+          "name":"Macbook Pro 2021",
+          "size":"16GB",
+          "price":20000,
+          "quantity":999,
+          "description":"Macbook Pro 2021 16GB",
+          "available":true,
+          "category":"LAPTOP",
+         "image": "https://a.allegroimg.com/original/118ede/1b3f805a43ce9b5c8faf0c32868b/APPLE-MacBook-Pro-2021-M1-Pro-16GB-1TB-SSD-14"
+       },
+       {
+          "id":6,
+          "name":"Macbook Air 2021",
+          "size":"8GB",
+          "price":15000,
+          "quantity":999,
+          "description":"Macbook Air 2021 8GB",
+          "available":true,
+          "category":"LAPTOP",
+          "image": "https://a.allegroimg.com/s400/11f4a6/5cea4b504968863df9a145455341/MacBook-Air-M1-8c-CPU-7c-GPU-16GB-256GB-Space-2020"
+       },
+       {
+          "id":7,
+          "name":"Dell XPS 13",
+          "size":"16GB",
+          "price":8000,
+          "quantity":999,
+          "description":"Dell XPS 13 16GB",
+          "available":true,
+          "category":"LAPTOP",
+          "image": "https://www.purepc.pl/image/news/2022/04/29_dell_xps_13_plus_zostaje_wprowadzony_do_sprzedazy_na_pokladzie_procesory_intel_alder_lake_p_oraz_niewidzialny_touchpad_1_b.jpg"
+       },
+       {
+          "id":8,
+          "name":"Dell XPS 15",
+          "size":"16GB",
+          "price":10000,
+          "quantity":999,
+          "description":"Dell XPS 15 16GB",
+          "available":true,
+          "category":"LAPTOP",
+          "image": "https://www.notebookcheck.net/uploads/tx_nbc2/DellXPS15-9510__1__04.jpg"
+       },
+       {
+          "id":9,
+          "name":"Asus Zenbook 14",
+          "size":"8GB",
+          "price":8000,
+          "quantity":999,
+          "description":"Asus Zenbook 14 8GB",
+          "available":true,
+          "category":"LAPTOP",
+          "image": "https://dlcdnwebimgs.asus.com/gain/5a89f27d-3bfd-4274-be45-424508a54d38/"
+       }
+    ]
+ }
