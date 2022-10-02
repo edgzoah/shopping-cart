@@ -12,6 +12,7 @@ const App = () => {
   const [cart, setCart] = useState([]);
   const [alert, setAlert] = useState(false);
   const [copy, setCopy] = useState(false);
+  const [promoCode, setPromoCode] = useState(0);
 
   useEffect(() => {
     const getData = async () => {
@@ -65,15 +66,23 @@ const App = () => {
     }
   };
 
+  const applyPromoCode = (event) => {
+    const code = event.target.value;
+    if (code === 'DISCOUNT') {
+      setPromoCode(0.1);
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <Logo className="App-logo" alt="logo" />
+        <input type="text" placeholder="Promo code" onChange={applyPromoCode} />
         <Filter filter={filter} />
-      <Cart cart={cart} CartLogo={CartLogo} removeFromCart={removeFromCart} clearCart={clearCart} />
+      <Cart cart={cart} CartLogo={CartLogo} removeFromCart={removeFromCart} clearCart={clearCart} promoCode={promoCode} />
       </header>
 
-      <Products products={products} addToCart={addToCart} />
+      <Products products={products} addToCart={addToCart} promoCode={promoCode} />
 
       {alert && <div className='alert'>Item added to cart</div>}
 
