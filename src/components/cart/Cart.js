@@ -10,7 +10,7 @@ const cart = (props) => {
             {props.cart.map((item) => {
               total += item.price * item.count;
 
-              if (props.promoCode !== 0) {
+              if (props.promoCode > 0) {
                 totalBeforeDiscount = total;
                 total *= (1 - props.promoCode);
               }
@@ -23,11 +23,24 @@ const cart = (props) => {
               })}
               {props.cart.length === 0 && <p>Cart is empty</p>}
               {props.cart.length > 0 &&
+              <>
               <div className='bottom-cart'> 
-              <p>Total: {total}PLN</p>
-              {props.promoCode !== 0 && <p>Total before discount: {totalBeforeDiscount}PLN</p>}
-              <button className='clear-cart' onClick={() => props.clearCart()}>Clear</button>
+              {/* <p>Total: {total}PLN</p> */}
+              {/* {props.promoCode !== 0 && <p>Total before discount: {totalBeforeDiscount}PLN</p>} */}
+
+                {
+                props.promoCode <= 0 
+                ? <>{total}PLN</> 
+                : <><div className='promoBefore'>{totalBeforeDiscount}PLN</div><div>{total}PLN</div></>
+                }
+
+
+              <button className='clear-cart' onClick={props.clearCart}>Clear</button>
               </div>
+              <div>
+                <p>You save: {totalBeforeDiscount-total}PLN</p>
+              </div>
+              </>
               }
           </div>
         </div>

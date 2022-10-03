@@ -58,3 +58,31 @@ html {
     transform: translateY(-5px);
   }
 }
+
+.promoCode {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.4;
+  font-family: "Roboto", sans-serif;
+}
+
+.submit-promocode {
+  background: #dfdfdf;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  padding: 3px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.promoBefore {
+  text-decoration: line-through;
+  color: #999;
+}

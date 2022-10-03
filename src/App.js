@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Products from './components/products/Products';
 import Cart from './components/cart/Cart';
 import Filter from './components/filter/Filter';
@@ -13,6 +13,7 @@ const App = () => {
   const [alert, setAlert] = useState(false);
   const [copy, setCopy] = useState(false);
   const [promoCode, setPromoCode] = useState(0);
+  const promoRef = useRef(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -66,8 +67,8 @@ const App = () => {
     }
   };
 
-  const applyPromoCode = (event) => {
-    const code = event.target.value;
+  const applyPromoCode = () => {
+    const code = promoRef.current.value;
     if (code === 'DISCOUNT') {
       setPromoCode(0.1);
     }
@@ -77,7 +78,10 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <Logo className="App-logo" alt="logo" />
-        <input type="text" placeholder="Promo code" onChange={applyPromoCode} />
+        <div className='promoCode'>
+        <input ref={promoRef} type="text" placeholder="Promo code" />
+        <button className="submit-promocode" onClick={applyPromoCode}>Submit</button>
+        </div>
         <Filter filter={filter} />
       <Cart cart={cart} CartLogo={CartLogo} removeFromCart={removeFromCart} clearCart={clearCart} promoCode={promoCode} />
       </header>
