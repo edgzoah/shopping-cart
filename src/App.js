@@ -71,16 +71,18 @@ const App = () => {
     const code = promoRef.current.value;
     if (code === 'DISCOUNT') {
       setPromoCode(0.1);
+    } else if (code === 'DISCOUNT2') {
+      setPromoCode(0.9);
     }
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Logo className="App-logo" alt="logo" />
+    <div className='App'>
+      <header className='App-header'>
+        <Logo className='App-logo' alt='logo' />
         <div className='promoCode'>
-        <input ref={promoRef} type="text" placeholder="Promo code" />
-        <button className="submit-promocode" onClick={applyPromoCode}>Submit</button>
+        <input ref={promoRef} type='text' placeholder='Promo code' />
+        <button className='submit-promocode' onClick={applyPromoCode}>Submit</button>
         </div>
         <Filter filter={filter} />
       <Cart cart={cart} CartLogo={CartLogo} removeFromCart={removeFromCart} clearCart={clearCart} promoCode={promoCode} />

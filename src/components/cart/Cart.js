@@ -24,21 +24,20 @@ const cart = (props) => {
               {props.cart.length === 0 && <p>Cart is empty</p>}
               {props.cart.length > 0 &&
               <>
+              {props.promoCode > 0 && <><div>
+                <p className='promo'>You save: {(totalBeforeDiscount-total).toFixed(2)}PLN</p>
+              </div></>}
+              
               <div className='bottom-cart'> 
-              {/* <p>Total: {total}PLN</p> */}
-              {/* {props.promoCode !== 0 && <p>Total before discount: {totalBeforeDiscount}PLN</p>} */}
 
                 {
                 props.promoCode <= 0 
-                ? <>{total}PLN</> 
-                : <><div className='promoBefore'>{totalBeforeDiscount}PLN</div><div>{total}PLN</div></>
+                ? <><b>{total}PLN</b></> 
+                : <><div className='promoBefore'><b>{totalBeforeDiscount.toFixed(2)}PLN</b></div><div><b>{total.toFixed(2)}PLN</b></div></>
                 }
 
 
               <button className='clear-cart' onClick={props.clearCart}>Clear</button>
-              </div>
-              <div>
-                <p>You save: {totalBeforeDiscount-total}PLN</p>
               </div>
               </>
               }

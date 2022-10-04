@@ -86,3 +86,8 @@ html {
   text-decoration: line-through;
   color: #999;
 }
+
+.promo {
+  color: #155724;
+  font-weight: 700;
+}
